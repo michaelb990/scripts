@@ -40,9 +40,11 @@ sudo usermod -aG docker $USER
 sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
-
 # oh-my-zsh setup
 sudo chsh -s $(which zsh) ubuntu
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ln -sf "$scripts_repo/zsh/zshrc.dotfile" "$HOME/.zshrc"
 ln -sf "$scripts_repo/zsh/sunrise.zsh-theme" "$HOME/.oh-my-zsh/themes/sunrise.zsh-theme"
+
+# git setup
+ln -sf "$scripts_repo/git/gitconfig" "$scripts_repo/.gitconfig"

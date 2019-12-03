@@ -1,0 +1,45 @@
+[user]
+  name = Michael Brown
+  email = brownxmi@amazon.com
+
+[color]
+  diff = true
+  status = true
+  branch = true
+  interactive = true
+  ui = true
+
+[core]
+  autocrlf = false
+  quotepath = false
+  trustctime = false
+  excludesfile = /Users/brownxmi/.config/git/excludes
+
+[alias]
+  st = status -sb
+  di = diff
+  poh = push origin HEAD
+  wdiff = diff --word-diff
+  co = checkout
+  ci = commit
+  br = branch
+  sta = stash
+  sub = submodule
+  pre = pull --rebase
+  lg = log --graph --pretty=format:'%Cred%h%Creset %C(cyan)%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  tags = tag -l
+
+[merge]
+  tool = opendiff
+
+[apply]
+  whitespace = nowarn
+
+[format]
+  pretty = %C(yellow)%h%Creset %s %C(red)(%cr)%Creset
+
+[push]
+  default = simple
+
+[branch]
+  autosetuprebase = always
