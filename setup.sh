@@ -2,21 +2,27 @@
 
 export DEBIAN_FRONTEND=noninteractive
 
-sudo apt update -y
-sudo apt upgrade -y
-sudo apt install -y \
-    emacs25 \
-    bash \
-    git \
-    zsh
+# upgrade existing packages
+sudo apt update -y &&\
+    sudo apt upgrade -y
 
-sudo apt install -y \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    gnupg-agent \
-    software-properties-common
+# install packages
+sudo apt update -y &&\
+    sudo apt install -y \
+	 apt-transport-https \
+	 bash \
+	 ca-certificates \
+	 curl \
+	 emacs25 \
+	 git \
+	 gnupg-agent \
+	 software-properties-common \
+	 zsh
 
+# oh-my-zsh setup
+# TODO: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# docker & docker-compose install
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
 sudo add-apt-repository \
