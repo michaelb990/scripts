@@ -44,4 +44,5 @@ sudo chmod +x /usr/local/bin/docker-compose
 # oh-my-zsh setup
 sudo chsh -s $(which zsh) ubuntu
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-ln -s "$scripts_repo/zshrc.dotfile" "$HOME/.zshrc"
+ln -sf "$scripts_repo/zsh/zshrc.dotfile" "$HOME/.zshrc"
+ln -sf "$scripts_repo/zsh/sunrise.zsh-theme" "$HOME/.oh-my-zsh/themes/sunrise.zsh-theme"
